@@ -20,7 +20,7 @@
   var standalone = window.navigator.standalone;
 
 // If there is native touch action bail the hammer has already dropped
-if ( (nativeTouchAction && !standalone) || !touchevents || !MO ) {
+if ( (window.forceHammerTime !== true) && ((nativeTouchAction && !standalone) || !touchevents || !MO )) {
 	return;
 }
 
