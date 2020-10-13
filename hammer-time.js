@@ -56,7 +56,7 @@ window.Hammer.time = {
 	},
 	shouldHammer: function( e ) {
 		var parentAction = e.target.hasParent;
-		return ( parentAction && ( !timeTouch || Date.now() - e.target.lastStart < 125 ) ) ?
+		return ( parentAction && ( !timeTouch || Date.now() - e.target.lastStart < 300 ) ) ?
 				parentAction : false;
 	},
 	touchHandler: function( e ) {
